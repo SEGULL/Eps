@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		
+	
+		 <mapping resource="pe/gob/sigapp/core/domain/Servicios.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Subservicios.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Cliente.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Equipos.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Personal.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/PuntoControl.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/TipoMedicion.hbm.xml" />
+		
+		
+		 <mapping resource="pe/gob/sigapp/core/domain/Provincia.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Distrito.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Calles.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Cuadra.hbm.xml" />
+		 <mapping resource="pe/gob/sigapp/core/domain/Domicilio.hbm.xml" />
+<!-- 		 <mapping resource="pe/gob/sigapp/core/domain/TipoMedicion.hbm.xml" /> -->
+<!-- 		 <mapping resource="pe/gob/sigapp/core/domain/TipoMedicion.hbm.xml" /> -->
+		
+	</session-factory>
+	
+</hibernate-configuration>

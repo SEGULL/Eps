@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.gob.sigapp.core.domain.Calles" table="calles">
+		<id name="id" type="java.lang.Long">
+			<column name="IdCalles" />
+			<generator class="identity" />
+		</id>
+
+		<property name="tipocalle" type="string">
+			<column name="TipoCalle" length="50" />
+		</property>
+		<property name="nombrecalle" type="string">
+			<column name="NombreCalle" length="50" />
+		</property>
+		<many-to-one name="distrito" class="pe.gob.sigapp.core.domain.Distrito"
+			lazy="false" fetch="select">
+			<column name="IdDistrito" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

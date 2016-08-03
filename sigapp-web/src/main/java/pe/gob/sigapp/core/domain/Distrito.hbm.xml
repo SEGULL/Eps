@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.gob.sigapp.core.domain.Distrito" table="distrito">
+		<id name="id" type="java.lang.Long">
+			<column name="IdDistrito" />
+			<generator class="identity" />
+		</id>
+
+		<property name="nombre" type="string">
+			<column name="Nombre" length="50" />
+		</property>
+		<property name="numeropob" type="int">
+			<column name="NumeroPob" length="50" />
+		</property>
+		<many-to-one name="provincia" class="pe.gob.sigapp.core.domain.Provincia"
+			lazy="false" fetch="select">
+			<column name="IdProvincia" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

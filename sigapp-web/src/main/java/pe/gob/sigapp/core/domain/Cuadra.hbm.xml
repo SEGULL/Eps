@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.gob.sigapp.core.domain.Cuadra" table="cuadra">
+		<id name="id" type="java.lang.Long">
+			<column name="IdCuadra" />
+			<generator class="identity" />
+		</id>
+
+		<property name="numerocuadra" type="int">
+			<column name="NumeroCuadra" length="50" />
+		</property>
+		<property name="ancho" type="double">
+			<column name="Ancho" length="50" />
+		</property>
+		<property name="lado" type="string">
+			<column name="Lado" length="50" />
+		</property>
+		<many-to-one name="calles" class="pe.gob.sigapp.core.domain.Calles"
+			lazy="false" fetch="select">
+			<column name="IdCalles" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>
